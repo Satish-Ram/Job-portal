@@ -1,4 +1,3 @@
-
 .job-card {
   transition: all 0.3s ease;
 }
@@ -18,4 +17,18 @@
   justify-content: center;
 
   font-size: 28px;
+}
+
+.category-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.category-icon {
+  font-size: 40px;
 }

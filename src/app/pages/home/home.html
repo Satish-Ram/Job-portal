@@ -1,0 +1,432 @@
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">
+      Job<span class="text-dark">Portal</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Jobs</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Companies</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+      </ul>
+      <div class="d-flex gap-2">
+
+        <button class="btn btn-outline-primary">
+          Login
+        </button>
+
+        <button class="btn btn-primary">
+          Register
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<section class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center min-vh-75">
+
+     
+      <div class="col-lg-7">
+
+        <span class="badge bg-primary-subtle text-primary px-3 py-2 mb-3">
+          🚀 Find Your Next Opportunity
+        </span>
+
+        <h1 class="display-4 fw-bold mb-3">
+          Find Your
+          <span class="text-primary">Dream Job</span>
+          Today
+        </h1>
+
+        <p class="lead text-secondary mb-4">
+          Discover thousands of job opportunities from top companies
+          and take the next step in your career.
+        </p>
+
+        
+        <div class="card border-0 shadow-sm p-3">
+          <div class="row g-2">
+
+            <div class="col-md-5">
+              <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">
+                  🔍
+                </span>
+
+                <input
+                    type="text"
+                    class="form-control border-start-0"
+                    placeholder="Job title or keyword"
+                    [(ngModel)]="searchKeyword">
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">
+                  📍
+                </span>
+
+                <input
+                    type="text"
+                    class="form-control border-start-0"
+                    placeholder="Location"
+                    [(ngModel)]="searchLocation">
+              </div>
+            </div>
+
+            <div class="col-md-3">
+                <button
+                    class="btn btn-primary w-100 h-100"
+                    (click)="searchJobs()">
+                    Search Jobs
+                </button>
+            </div>
+
+          </div>
+        </div>
+
+        
+        <div class="row mt-5">
+
+          <div class="col-4">
+            <h4 class="fw-bold mb-1">10K+</h4>
+            <small class="text-secondary">Active Jobs</small>
+          </div>
+
+          <div class="col-4">
+            <h4 class="fw-bold mb-1">500+</h4>
+            <small class="text-secondary">Companies</small>
+          </div>
+
+          <div class="col-4">
+            <h4 class="fw-bold mb-1">25K+</h4>
+            <small class="text-secondary">Job Seekers</small>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+      <div class="col-lg-5 text-center mt-5 mt-lg-0">
+
+        <div class="hero-card shadow-sm p-5 rounded-4">
+
+          <div class="display-1 mb-3">
+            💼
+          </div>
+
+          <h3 class="fw-bold">
+            Your Career Starts Here
+          </h3>
+
+          <p class="text-secondary">
+            Connect with companies looking for talented people like you.
+          </p>
+
+          <button class="btn btn-outline-primary">
+            Explore Jobs
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="text-primary fw-semibold">EXPLORE OPPORTUNITIES</span>
+
+      <h2 class="fw-bold mt-2">
+        Popular Job Categories
+      </h2>
+
+      <p class="text-secondary">
+        Explore jobs by popular categories and find the right opportunity.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="category-card card border-0 shadow-sm h-100 p-4">
+
+          <div class="category-icon mb-3">
+            💻
+          </div>
+
+          <h5 class="fw-bold">
+            Software Development
+          </h5>
+
+          <p class="text-secondary mb-2">
+            Build applications and software solutions.
+          </p>
+
+          <span class="text-primary fw-semibold">
+            2,450 Jobs →
+          </span>
+
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="category-card card border-0 shadow-sm h-100 p-4">
+
+          <div class="category-icon mb-3">
+            📊
+          </div>
+
+          <h5 class="fw-bold">
+            Data Science
+          </h5>
+
+          <p class="text-secondary mb-2">
+            Work with data, analytics and machine learning.
+          </p>
+
+          <span class="text-primary fw-semibold">
+            1,280 Jobs →
+          </span>
+
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="category-card card border-0 shadow-sm h-100 p-4">
+
+          <div class="category-icon mb-3">
+            🎨
+          </div>
+
+          <h5 class="fw-bold">
+            UI/UX Design
+          </h5>
+
+          <p class="text-secondary mb-2">
+            Create beautiful and user-friendly experiences.
+          </p>
+
+          <span class="text-primary fw-semibold">
+            950 Jobs →
+          </span>
+
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="category-card card border-0 shadow-sm h-100 p-4">
+
+          <div class="category-icon mb-3">
+            📱
+          </div>
+
+          <h5 class="fw-bold">
+            Mobile Development
+          </h5>
+
+          <p class="text-secondary mb-2">
+            Develop modern Android and iOS applications.
+          </p>
+
+          <span class="text-primary fw-semibold">
+            1,120 Jobs →
+          </span>
+
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="category-card card border-0 shadow-sm h-100 p-4">
+
+          <div class="category-icon mb-3">
+            ☁️
+          </div>
+
+          <h5 class="fw-bold">
+            Cloud & DevOps
+          </h5>
+
+          <p class="text-secondary mb-2">
+            Manage cloud infrastructure and deployments.
+          </p>
+
+          <span class="text-primary fw-semibold">
+            870 Jobs →
+          </span>
+
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="category-card card border-0 shadow-sm h-100 p-4">
+
+          <div class="category-icon mb-3">
+            📈
+          </div>
+
+          <h5 class="fw-bold">
+            Marketing
+          </h5>
+
+          <p class="text-secondary mb-2">
+            Grow brands through digital marketing strategies.
+          </p>
+
+          <span class="text-primary fw-semibold">
+            1,650 Jobs →
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+      <div>
+        <span class="text-primary fw-semibold">
+          OPPORTUNITIES
+        </span>
+
+        <h2 class="fw-bold mt-2 mb-0">
+          Featured Jobs
+        </h2>
+      </div>
+
+      <button class="btn btn-outline-primary">
+        View All Jobs →
+      </button>
+
+    </div>
+
+    
+    <div class="row g-4">
+
+      @for (job of filteredJobs; track job.id)  {
+
+        <div class="col-lg-6">
+
+          <div class="card job-card border-0 shadow-sm h-100 p-4">
+
+            <div class="d-flex justify-content-between">
+
+              
+              <div class="d-flex gap-3">
+
+                <div class="company-logo">
+                  {{ job.logo }}
+                </div>
+
+                <div>
+                  <p class="text-secondary mb-1">
+                    {{ job.company }}
+                  </p>
+
+                  <h5 class="fw-bold mb-0">
+                    {{ job.title }}
+                  </h5>
+                </div>
+
+              </div>
+
+              <button class="btn btn-light">
+                ♡
+              </button>
+
+            </div>
+
+            
+            <div class="mt-4">
+
+              <span class="me-3 text-secondary">
+                📍 {{ job.location }}
+              </span>
+
+              <span class="text-secondary">
+                💼 {{ job.type }}
+              </span>
+
+            </div>
+
+            
+            <div class="d-flex gap-2 mt-3">
+
+              <span class="badge bg-primary-subtle text-primary">
+                {{ job.salary }}
+              </span>
+
+              <span class="badge bg-secondary-subtle text-secondary">
+                {{ job.experience }}
+              </span>
+
+            </div>
+
+            
+            <div class="d-flex justify-content-between align-items-center mt-4">
+
+              <small class="text-secondary">
+                Posted recently
+              </small>
+
+                <a class="btn btn-primary"
+                    [routerLink]="['/job-details', job.id]">
+                    View Details
+                </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+</section>

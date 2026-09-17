@@ -1,0 +1,14 @@
+.job-logo {
+  width: 70px;
+  height: 70px;
+
+  background-color: #f1f5ff;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 35px;
+}
