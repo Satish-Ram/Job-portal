@@ -10,57 +10,68 @@ interface Job {
   type: string;
   experience: string;
   logo: string;
+  category: string;
 }
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink,FormsModule],
+  imports: [RouterLink, FormsModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
 export class Home {
+  filterByCategory(category: string): void {
+    this.filteredJobs = this.jobs.filter(job =>
+      job.category === category
+    );
+  }
 
   jobs: Job[] = [
     {
-      id:1,
+      id: 1,
       company: 'TechCorp India',
       title: 'Java Developer',
       location: 'Pune, Maharashtra',
       salary: '₹4 - ₹7 LPA',
       type: 'Full Time',
       experience: '0-2 Years',
-      logo: '🏢'
+      logo: '🏢',
+      category: 'Software Development'
     },
     {
-      id:2,
+      id: 2,
       company: 'Innovate Solutions',
       title: 'Angular Developer',
       location: 'Bangalore, Karnataka',
       salary: '₹5 - ₹9 LPA',
       type: 'Full Time',
       experience: '1-3 Years',
-      logo: '💻'
+      logo: '💻',
+      category: 'Software Development'
     },
     {
-      id:3,
+      id: 3,
       company: 'Digital Works',
       title: 'Frontend Developer',
       location: 'Mumbai, Maharashtra',
       salary: '₹3 - ₹6 LPA',
       type: 'Full Time',
       experience: '0-2 Years',
-      logo: '🚀'
+      logo: '🚀',
+      category: 'UI/UX Design'
     },
     {
-      id:4,
+      id: 4,
       company: 'Cloud Systems',
       title: '.NET Developer',
       location: 'Hyderabad, Telangana',
       salary: '₹4 - ₹8 LPA',
       type: 'Full Time',
       experience: '0-2 Years',
-      logo: '☁️'
+      logo: '☁️',
+      category: 'Software Development'
     }
+
   ];
   searchKeyword: string = '';
   searchLocation: string = '';
@@ -90,4 +101,5 @@ export class Home {
     });
 
   }
+
 }
